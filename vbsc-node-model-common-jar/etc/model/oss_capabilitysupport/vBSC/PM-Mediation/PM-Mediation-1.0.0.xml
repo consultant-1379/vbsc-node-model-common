@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+* ******************************************************************************
+* COPYRIGHT Ericsson 2021
+*
+* The copyright to the computer program(s) herein is the property of
+* Ericsson Inc. The programs may be used and/or copied only with written
+* permission from Ericsson Inc. or in accordance with the terms and
+* conditions stipulated in the agreement/contract under which the
+* program(s) have been supplied.
+* ******************************************************************************  -->
+<CapabilitySupportDefinition
+		oc:ns="vBSC"
+		oc:name="PM-Mediation"
+		oc:version="1.0.0"
+		oc:lifeCycle="CURRENT"
+		xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+		xmlns:oc="urn:com:ericsson:schema:xml:oss:oss_common"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<oc:modelCreationInfo author="Eklavya" creationDate="07-11-2021">
+		<oc:designedModel componentId="vBSC Common"/>
+	</oc:modelCreationInfo>
+
+	<oc:desc>Contains PM Mediation related capabilities for vBSC node</oc:desc>
+
+	<complexCapability name="ropToIntermediateRecovery">
+		<value xsi:type="oc:mapValue">
+			<oc:mapEntries>
+				<oc:mapEntry>
+					<oc:key xsi:type="oc:integerValue" value="300"/>
+					<oc:value xsi:type="oc:integerValue" value="0"/>
+				</oc:mapEntry>
+				<oc:mapEntry>
+					<oc:key xsi:type="oc:integerValue" value="900"/>
+					<oc:value xsi:type="oc:integerValue" value="0"/>
+				</oc:mapEntry>
+				<oc:mapEntry>
+					<oc:key xsi:type="oc:integerValue" value="1800"/>
+					<oc:value xsi:type="oc:integerValue" value="0"/>
+				</oc:mapEntry>
+				<oc:mapEntry>
+					<oc:key xsi:type="oc:integerValue" value="3600"/>
+					<oc:value xsi:type="oc:integerValue" value="0"/>
+				</oc:mapEntry>
+			</oc:mapEntries>
+		</value>
+	</complexCapability>
+
+	<capability name="nonPmicManagedScanner" value="true"/>
+
+</CapabilitySupportDefinition>

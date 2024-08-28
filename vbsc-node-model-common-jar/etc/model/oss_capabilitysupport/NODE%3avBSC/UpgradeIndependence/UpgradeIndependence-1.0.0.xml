@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+*******************************************************************************
+* COPYRIGHT Ericsson LMI 2021. All rights reserved.
+*
+* No part of this document may be reproduced in any form without the
+* written permission of the copyright owner.The contents of this document
+* are subject to revision without notice due to continued progress in
+* methodology, design and manufacturing. Ericsson shall have no liability
+* for any error or damage of any kind resulting from the use of this document.
+********************************************************************************
+-->
+<CapabilitySupportDefinition
+    xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+    xmlns:oc="urn:com:ericsson:schema:xml:oss:oss_common"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    oc:ns="NODE:vBSC"
+    oc:name="UpgradeIndependence"
+    oc:version="1.0.0">
+
+    <oc:modelCreationInfo author="Chargers" creationDate="10/11/2021">
+        <oc:designedModel componentId="Upgrade Independence Capability Support" />
+    </oc:modelCreationInfo>
+
+    <oc:desc>Upgrade Independence Capability Support for vBSC node target type</oc:desc>
+
+    <capability name="Supported" value="true" />
+
+</CapabilitySupportDefinition>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+*******************************************************************************
+* COPYRIGHT Ericsson LMI 2021. All rights reserved.
+*
+* No part of this document may be reproduced in any form without the
+* written permission of the copyright owner.The contents of this document
+* are subject to revision without notice due to continued progress in
+* methodology, design and manufacturing. Ericsson shall have no liability
+* for any error or damage of any kind resulting from the use of this document.
+********************************************************************************
+-->
+<oss_capabilitysupport:CapabilitySupportDefinition
+    oss_common:ns="vBSC" oss_common:name="ned-common" oss_common:version="1.0.0"
+    xmlns:oss_capabilitysupport="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+    xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+    xmlns:oss_capability="urn:com:ericsson:schema:xml:oss:oss_capability"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <oss_common:modelCreationInfo author="Chargers" creationDate="10/11/2021">
+        <oss_common:designedModel componentId="vBSC Common Models" />
+    </oss_common:modelCreationInfo>
+
+    <oss_common:desc>Capability Support model for common node-related capabilities for node type vBSC</oss_common:desc>
+    <oss_capabilitysupport:capability name="hasReliableProductVersion" value="true" />
+    <oss_capabilitysupport:capability name="requiresMeContext" value="true" />
+    <oss_capabilitysupport:capability name="supportsVirtualization" value="true" />
+
+    <oss_capabilitysupport:complexCapability name="releaseInformationSource">
+        <oss_capabilitysupport:value value="USER" xsi:type="oss_common:stringValue" />
+    </oss_capabilitysupport:complexCapability>
+
+    <oss_capabilitysupport:complexCapability name="addNodeGuiNodeNameSelectors">
+        <oss_capabilitysupport:value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                        <oss_common:key xsi:type="oss_common:stringValue" value="connectedMscs" />
+                        <oss_common:value xsi:type="oss_common:stringValue" value="MSC-DB,IP-STP,MSC-DB-BSP,IP-STP-BSP,MSC-BC-BSP,MSC-BC-IS,vMSC,vIP-STP,vMSC-HC" />
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+
+</oss_capabilitysupport:CapabilitySupportDefinition>

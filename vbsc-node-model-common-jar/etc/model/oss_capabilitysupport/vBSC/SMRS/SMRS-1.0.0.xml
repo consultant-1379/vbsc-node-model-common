@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oss_capabilitysupport:CapabilitySupportDefinition oss_common:ns="vBSC" oss_common:name="SMRS" oss_common:version="1.0.0" oss_common:lifeCycle="CURRENT" xmlns:oss_capabilitysupport="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport" xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common" xmlns:oss_capability="urn:com:ericsson:schema:xml:oss:oss_capability" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <oss_common:modelCreationInfo author="Team Royals" creationDate="2021-11-25">
+        <oss_common:designedModel componentId="vbsc-node-model-common" />
+    </oss_common:modelCreationInfo>
+    <oss_common:desc>SMRS Capability Support for node type vBSC</oss_common:desc>
+    <!-- Capability support definition for NeAccountTypeDirectory -->
+    <oss_capabilitysupport:complexCapability name="NeAccountTypeDirectory">
+        <oss_capabilitysupport:value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="SOFTWARE" />
+                    <oss_common:value xsi:type="oss_common:stringValue" value="$SMRS_HOME/smrsroot/$ACCOUNT_TYPE/axe/" />
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="BACKUP" />
+                    <oss_common:value xsi:type="oss_common:stringValue" value="$SMRS_HOME/smrsroot/$ACCOUNT_TYPE/$NE_TYPE/" />
+                </oss_common:mapEntry>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="LICENCE" />
+                    <oss_common:value xsi:type="oss_common:stringValue" value="$SMRS_HOME/smrsroot/$ACCOUNT_TYPE/" />
+                </oss_common:mapEntry>
+                <oss_common:mapEntry xsi:type="oss_common:mapValueEntry">
+                    <oss_common:key xsi:type="oss_common:stringValue" value="UPGRADE_INDEPENDENCE" />
+                    <oss_common:value xsi:type="oss_common:stringValue" value="$SMRS_HOME/smrsroot/$ACCOUNT_TYPE/" />
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+    <!-- Capability definition for UserAccounts -->
+    <!-- TODO:Need to confirm the max username length so that the service can resolve this to a valid name. same for below account also.-->
+    <oss_capabilitysupport:capability name="UserAccountName" value="mm-$ACCOUNT_TYPE" />
+    <!-- Capability definition for SmrsHome -->
+    <oss_capabilitysupport:capability name="SmrsHome" value="/home/smrs/" />
+    <!-- Capability definition for SmrsHomeV2 -->
+    <oss_capabilitysupport:complexCapability name="SmrsHomeV2">
+        <oss_capabilitysupport:value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry xsi:type="oss_common:mapValueEntry">
+                    <oss_common:key xsi:type="oss_common:stringValue" value="DEFAULT" />
+                    <oss_common:value xsi:type="oss_common:stringValue" value="/home/smrs/" />
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+    <!-- Capability definition for SmrsRoot -->
+    <oss_capabilitysupport:capability name="SmrsRoot" value="/home/smrs/smrsroot/" />
+</oss_capabilitysupport:CapabilitySupportDefinition>

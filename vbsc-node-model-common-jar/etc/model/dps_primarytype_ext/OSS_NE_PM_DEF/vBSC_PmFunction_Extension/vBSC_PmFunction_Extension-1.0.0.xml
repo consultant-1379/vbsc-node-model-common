@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  *******************************************************************************
+  * COPYRIGHT Ericsson LMI 2021. All rights reserved.
+  *
+  * No part of this document may be reproduced in any form without the
+  * written permission of the copyright owner.The contents of this document
+  * are subject to revision without notice due to continued progress in
+  * methodology, design and manufacturing. Ericsson shall have no liability
+  * for any error or damage of any kind resulting from the use of this document.
+  ********************************************************************************
+-->
+<pte:PrimaryTypeExtensionDefinition xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+                                    xmlns:pt="urn:com:ericsson:schema:xml:oss:dps_primarytype"
+                                    xmlns:pte="urn:com:ericsson:schema:xml:oss:dps_primarytype_ext"
+                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                    oss_common:ns="OSS_NE_PM_DEF"
+                                    oss_common:name="vBSC_PmFunction_Extension"
+                                    oss_common:version="1.0.0">
+
+    <oss_common:modelCreationInfo author="Eklavya" creationDate="15-Dec-2021">
+        <oss_common:designedModel componentId="vBSC Node Common Model" />
+    </oss_common:modelCreationInfo>
+
+    <oss_common:desc>
+        This model extends the PmFunction model for vBSC node
+    </oss_common:desc>
+
+    <oss_common:extendedModelElement urn="//OSS_NE_PM_DEF/PmFunction/*" />
+    <oss_common:requiresTargetType category="NODE" type="vBSC" />
+
+    <pte:primaryTypeExtension>
+        <pte:primaryTypeAttribute oss_common:name="barSourceDir" readBehavior="INHERITED" writeBehavior="INHERITED">
+            <oss_common:desc>The sourceDir for BAR BSC Recordings</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:stringType" />
+            <oss_common:default xsi:type="oss_common:stringValue" value="/data_transfer/destinations/CDHDEFAULT/Ready/"/>
+        </pte:primaryTypeAttribute>
+        <pte:primaryTypeAttribute oss_common:name="cerSourceDir" readBehavior="INHERITED" writeBehavior="INHERITED">
+            <oss_common:desc>The sourceDir for CER BSC Recordings</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:stringType" />
+            <oss_common:default xsi:type="oss_common:stringValue" value="/data_transfer/destinations/CDHDEFAULT/Ready/"/>
+        </pte:primaryTypeAttribute>
+        <pte:primaryTypeAttribute oss_common:name="ctrSourceDir" readBehavior="INHERITED" writeBehavior="INHERITED">
+            <oss_common:desc>The sourceDir for CTR BSC Recordings</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:stringType" />
+            <oss_common:default xsi:type="oss_common:stringValue" value="/data_transfer/destinations/CDHDEFAULT/Ready/"/>
+        </pte:primaryTypeAttribute>
+        <pte:primaryTypeAttribute oss_common:name="mrrSourceDir" readBehavior="INHERITED" writeBehavior="INHERITED">
+            <oss_common:desc>The sourceDir for MRR BSC Recordings</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:stringType" />
+            <oss_common:default xsi:type="oss_common:stringValue" value="/data_transfer/destinations/CDHDEFAULT/Ready/"/>
+        </pte:primaryTypeAttribute>
+        <pte:primaryTypeAttribute oss_common:name="rirSourceDir" readBehavior="INHERITED" writeBehavior="INHERITED">
+            <oss_common:desc>The sourceDir for RIR BSC Recordings</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:stringType" />
+            <oss_common:default xsi:type="oss_common:stringValue" value="/data_transfer/destinations/CDHDEFAULT/Ready/"/>
+        </pte:primaryTypeAttribute>
+        <pte:primaryTypeAttribute oss_common:name="sourceDir" readBehavior="INHERITED" writeBehavior="INHERITED">
+            <oss_common:desc>The sourceDir for BSC Statistical</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:stringType" />
+            <oss_common:default xsi:type="oss_common:stringValue" value="/data_transfer/destinations/CDHDEFAULT/Ready/"/>
+        </pte:primaryTypeAttribute>
+        <pte:primaryTypeAttribute oss_common:name="mtrSourceDir" readBehavior="INHERITED" writeBehavior="INHERITED">
+            <oss_common:desc>The sourceDir for MTR Subscription</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:stringType" />
+            <oss_common:default xsi:type="oss_common:stringValue" value="/data_transfer/destinations/CDHDEFAULT/Ready/"/>
+        </pte:primaryTypeAttribute>
+        <pte:primaryTypeAttribute oss_common:name="fileSize5min" readBehavior="INHERITED" writeBehavior="PERSIST">
+            <oss_common:desc>Define type of node</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:stringType" />
+            <oss_common:default xsi:type="oss_common:stringValue" value="null"/>
+        </pte:primaryTypeAttribute>
+        <pte:primaryTypeAttribute oss_common:name="fileSize15min" readBehavior="INHERITED" writeBehavior="PERSIST">
+            <oss_common:desc>Define type of node</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:stringType" />
+            <oss_common:default xsi:type="oss_common:stringValue" value="null"/>
+        </pte:primaryTypeAttribute>
+        <pte:primaryTypeAttribute oss_common:name="fileSize30min" readBehavior="INHERITED" writeBehavior="PERSIST">
+            <oss_common:desc>Define type of node</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:stringType" />
+            <oss_common:default xsi:type="oss_common:stringValue" value="null"/>
+        </pte:primaryTypeAttribute>
+        <pte:primaryTypeAttribute oss_common:name="fileSize60min" readBehavior="INHERITED" writeBehavior="PERSIST">
+            <oss_common:desc>Define type of node</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:stringType" />
+            <oss_common:default xsi:type="oss_common:stringValue" value="null"/>
+        </pte:primaryTypeAttribute>
+    </pte:primaryTypeExtension>
+
+</pte:PrimaryTypeExtensionDefinition>

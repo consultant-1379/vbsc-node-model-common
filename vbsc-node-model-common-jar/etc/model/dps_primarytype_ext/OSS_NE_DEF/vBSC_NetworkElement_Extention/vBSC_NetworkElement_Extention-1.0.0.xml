@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+*******************************************************************************
+* COPYRIGHT Ericsson LMI 2021. All rights reserved.
+*
+* No part of this document may be reproduced in any form without the
+* written permission of the copyright owner.The contents of this document
+* are subject to revision without notice due to continued progress in
+* methodology, design and manufacturing. Ericsson shall have no liability
+* for any error or damage of any kind resulting from the use of this document.
+********************************************************************************
+-->
+<pte:PrimaryTypeExtensionDefinition xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+                                    xmlns:pt="urn:com:ericsson:schema:xml:oss:dps_primarytype"
+                                    xmlns:pte="urn:com:ericsson:schema:xml:oss:dps_primarytype_ext"
+                                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                    xmlns:dps_common="urn:com:ericsson:schema:xml:oss:dps_common" oss_common:ns="OSS_NE_DEF"
+                                    oss_common:name="vBSC_NetworkElement_Extention" oss_common:version="1.0.0">
+
+    <oss_common:modelCreationInfo author="Chargers" creationDate="10/11/2021">
+        <oss_common:designedModel componentId="vBSC NetworkElement Extension for AddNode" />
+    </oss_common:modelCreationInfo>
+
+    <oss_common:desc>This model extends the NetworkElement model for vBSC nodes for AddNode
+    </oss_common:desc>
+    <oss_common:extendedModelElement urn="//OSS_NE_DEF/NetworkElement/*" />
+    <oss_common:requiresTargetType category="NODE" type="vBSC" />
+
+    <pte:primaryTypeExtension>
+        <pte:primaryTypeAttribute oss_common:name="connectedMscs" readBehavior="FROM_PERSISTENCE" writeBehavior="PERSIST_AND_DELEGATE">
+            <oss_common:desc>The connected MSC nodes for this vBSC. For example: [NetworkElement=MSC123, NetworkElement=MSC124]</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:listType">
+                <oss_common:collectionSizeConstraint>
+                    <oss_common:maxSize value="32"/>
+                </oss_common:collectionSizeConstraint>
+                <oss_common:collectionUniquenessConstraint/>
+                <oss_common:collectionValuesType xsi:type="oss_common:moRefType" modelUrn="//OSS_NE_DEF/NetworkElement/*">
+                        <oss_common:notNullConstraint/>
+                </oss_common:collectionValuesType>
+            </oss_common:type>
+            <pt:requires>
+                <dps_common:pathExpressionCondition
+                        condition="attrEqual(findMo(.)/@neType, 'MSC-DB') or attrEqual(findMo(.)/@neType, 'IP-STP') or attrEqual(findMo(.)/@neType, 'MSC-DB-BSP') or attrEqual(findMo(.)/@neType, 'IP-STP-BSP') or attrEqual(findMo(.)/@neType, 'MSC-BC-BSP') or attrEqual(findMo(.)/@neType, 'MSC-BC-IS') or attrEqual(findMo(.)/@neType, 'vMSC') or attrEqual(findMo(.)/@neType, 'vIP-STP') or attrEqual(findMo(.)/@neType, 'vMSC-HC')"/>
+            </pt:requires>
+        </pte:primaryTypeAttribute>
+        <pte:primaryTypeAttribute oss_common:name="mscPoolRefs" readBehavior="FROM_PERSISTENCE" writeBehavior="PERSIST_AND_DELEGATE">
+            <oss_common:desc>The MSC pool(s) serving this vBSC. For example: [Pool=MscPool1, Pool=MscPool2]</oss_common:desc>
+            <oss_common:type xsi:type="oss_common:listType">
+                <oss_common:collectionUniquenessConstraint/>
+                <oss_common:collectionValuesType xsi:type="oss_common:moRefType" modelUrn="//OSS_NE_DEF/Pool/*">
+                        <oss_common:notNullConstraint/>
+                </oss_common:collectionValuesType>
+            </oss_common:type>
+            <pt:requires>
+                <dps_common:pathExpressionCondition
+                        condition="attrEqual(findMo(.)/@poolType, 'MSC_POOL')"/>
+            </pt:requires>
+        </pte:primaryTypeAttribute>
+        <pte:changeEventHandling />
+    </pte:primaryTypeExtension>
+    <pte:primaryTypeAttributeReplacement>
+        <pte:primaryTypeAttribute immutable="false" key="false" mandatory="true" oss_common:lifeCycle="CURRENT" oss_common:name="timeZone" readBehavior="FROM_PERSISTENCE" sensitive="false" writeBehavior="PERSIST">
+            <oss_common:desc>The time zone of the locale. Entries are as defined in the tz database (Olson database).</oss_common:desc>
+            <oss_common:type modelUrn="//OSS_NE_DEF/TimeZone/1.0.0" xsi:type="oss_common:enumRefType">
+                <oss_common:notNullConstraint/>
+            </oss_common:type>
+        </pte:primaryTypeAttribute>
+    </pte:primaryTypeAttributeReplacement>
+
+</pte:PrimaryTypeExtensionDefinition>

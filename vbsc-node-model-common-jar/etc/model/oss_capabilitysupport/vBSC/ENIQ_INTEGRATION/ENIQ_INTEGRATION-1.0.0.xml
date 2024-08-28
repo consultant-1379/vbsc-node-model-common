@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- *******************************************************************************
+    * COPYRIGHT Ericsson 2022 *
+    * The copyright to the computer program(s) herein is the property of
+    * Ericsson Inc. The programs may be used and/or copied only with written
+    * permission from Ericsson Inc. or in accordance with the terms and
+    * conditions stipulated in the agreement/contract under which the
+    * program(s) have been supplied.
+    *******************************************************************************
+    -->
+
+<CapabilitySupportDefinition oc:ns="vBSC"
+                             oc:name="ENIQ_INTEGRATION" oc:version="1.0.0"
+                             xmlns="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport" xmlns:oc="urn:com:ericsson:schema:xml:oss:oss_common"
+                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                             xsi:schemaLocation="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport oss_capabilitysupport.xsd">
+  <oc:modelCreationInfo author="zkshhrx"
+                        creationDate="03-02-2022">
+    <oc:designedModel componentId="ENIQ Integration capabilitySupport"/>
+  </oc:modelCreationInfo>
+  <oc:desc>ENIQ-ENM Integration capabilitySupport - vBSC</oc:desc>
+
+  <capability name="FILTER_NAMESPACE" value="EniqTopologyService"/>
+
+  <capability name="FILTER_NAME" value="ENIQ_BSC"/>
+
+  <capability name="FILTER_VERSION" value=""/>
+
+  <capability name="PRE_PROCESSOR" value="SpecialCaseBsc"/>
+
+  <capability name="MIM_NAME" value="ComTop"/>
+
+  <capability name="OUTPUT_DIRECTORY" value="granTopology"/>
+
+  <capability name="OUTPUT_FILENAME" value="BSC"/>
+
+  <capability name="ENIQ_EVENTS_SUPPORTED" value="false"/>
+
+  <capability name="ENIQ_EVENTS_SYMLINK_DIRECTORY" value=""/>
+
+  <capability name="ENIQ_EVENTS_SYMLINK_TARGET_PREFIX" value=""/>
+
+  <capability name="ENIQ_EVENTS_SYMLINK_FILE_NAME" value=""/>
+
+  <capability name="ENIQ_STATS_SUPPORTED" value="true"/>
+
+  <capability name="TECHNOLOGY_TYPE" value="GRAN"/>
+
+  <capability name="EXPORT_FLOW_TYPE" value="CACHE"/>
+
+  <capability name="EXPORT_FILE_AGGREGATED" value="TRUE"/>
+
+  <capability name="NODE_EXPORT_JOB_TYPE" value="SINGLE"/>
+
+  <capability name="ASSOCIATION_FILE_REQUIRED" value="TRUE"/>
+
+  <capability name="ASSOCIATION_FILE_NAME" value="BscAssociations"/>
+
+  <capability name="SYMLINK_SUPPORT_FOR_ASSOCIATION_FILE" value="false"/>
+</CapabilitySupportDefinition>

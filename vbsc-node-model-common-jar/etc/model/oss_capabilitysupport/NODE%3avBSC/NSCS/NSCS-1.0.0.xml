@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oss_capabilitysupport:CapabilitySupportDefinition
+        oss_common:lifeCycle="CURRENT"
+        oss_common:name="NSCS"
+        oss_common:ns="NODE:vBSC"
+        oss_common:version="1.0.0"
+        xmlns:oss_capabilitysupport="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport"
+        xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <oss_common:modelCreationInfo
+            author="Chargers"
+            creationDate="">
+        <oss_common:designedModel componentId="vbsc-node-model-common"/>
+    </oss_common:modelCreationInfo>
+    <oss_common:desc>NSCS Capability Support for Target type vBSC.</oss_common:desc>
+
+    <oss_capabilitysupport:capability name="isCertificateManagementSupported" value="TRUE"/>
+    <oss_capabilitysupport:capability name="isDeprecatedAuthorityTypeSupported" value="FALSE"/>
+    <oss_capabilitysupport:capability name="isLdapCommonUserSupported" value="TRUE"/>
+    <oss_capabilitysupport:capability name="defaultEnrollmentMode" value="CMPv2_INITIAL"/>
+
+    <oss_capabilitysupport:complexCapability name="comEcimDefaultNodeCredentialId">
+        <oss_capabilitysupport:value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="OAM"/>
+                    <oss_common:value xsi:type="oss_common:stringValue" value="oamNodeCredential"/>
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+
+    <oss_capabilitysupport:complexCapability name="comEcimDefaultTrustCategoryId">
+        <oss_capabilitysupport:value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="OAM"/>
+                    <oss_common:value xsi:type="oss_common:stringValue" value="oamTrustCategory"/>
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+
+    <oss_capabilitysupport:complexCapability name="issueCertificateWorkflows">
+        <oss_capabilitysupport:value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="OAM"/>
+                    <oss_common:value xsi:type="oss_common:stringValue" value="COMIssueCert"/>
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+
+    <oss_capabilitysupport:complexCapability name="trustDistributeWorkflows">
+        <oss_capabilitysupport:value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="OAM"/>
+                    <oss_common:value xsi:type="oss_common:stringValue" value="COMIssueTrustCert"/>
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+
+    <oss_capabilitysupport:complexCapability name="trustRemoveWorkflows">
+        <oss_capabilitysupport:value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="OAM"/>
+                    <oss_common:value xsi:type="oss_common:stringValue" value="COMRemoveTrust"/>
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+
+    <oss_capabilitysupport:complexCapability name="supportedEnrollmentModes">
+        <oss_capabilitysupport:value xsi:type="oss_common:collectionValue">
+            <oss_common:values>
+                <oss_common:value xsi:type="oss_common:stringValue" value="CMPv2_INITIAL"/>
+            </oss_common:values>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+
+    <oss_capabilitysupport:complexCapability name="defaultEntityProfiles">
+        <oss_capabilitysupport:value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="OAM"/>
+                    <oss_common:value xsi:type="oss_common:stringValue" value="DUSGen2OAM_CHAIN_EP"/>
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+
+    <oss_capabilitysupport:complexCapability name="enrollmentCAAuthorizationModes">
+        <oss_capabilitysupport:value xsi:type="oss_common:mapValue">
+            <oss_common:mapEntries>
+                <oss_common:mapEntry>
+                    <oss_common:key xsi:type="oss_common:stringValue" value="OAM"/>
+                    <oss_common:value xsi:type="oss_common:stringValue" value="ENROLLMENT_ROOT_CA_CERTIFICATE"/>
+                </oss_common:mapEntry>
+            </oss_common:mapEntries>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+
+    <oss_capabilitysupport:complexCapability name="supportedCertificateTypes">
+        <oss_capabilitysupport:value xsi:type="oss_common:collectionValue">
+            <oss_common:values>
+                <oss_common:value xsi:type="oss_common:stringValue" value="OAM"/>
+            </oss_common:values>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+
+
+    <oss_capabilitysupport:complexCapability name="supportedTrustCategories">
+        <oss_capabilitysupport:value xsi:type="oss_common:collectionValue">
+            <oss_common:values>
+                <oss_common:value xsi:type="oss_common:stringValue" value="OAM"/>
+            </oss_common:values>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+
+    <oss_capabilitysupport:complexCapability name="unsupportedSecadmCliCommands">
+        <oss_capabilitysupport:value xsi:type="oss_common:collectionValue">
+            <oss_common:values>
+                <oss_common:value xsi:type="oss_common:stringValue" value="sshkey"/>
+                <oss_common:value xsi:type="oss_common:stringValue" value="snmp"/>
+                <oss_common:value xsi:type="oss_common:stringValue" value="securitylevel"/>
+                <oss_common:value xsi:type="oss_common:stringValue" value="ipsec"/>
+                <oss_common:value xsi:type="oss_common:stringValue" value="crlcheck"/>
+                <oss_common:value xsi:type="oss_common:stringValue" value="crldownload"/>
+                <oss_common:value xsi:type="oss_common:stringValue" value="ciphers"/>
+                <oss_common:value xsi:type="oss_common:stringValue" value="rtsel"/>
+                <oss_common:value xsi:type="oss_common:stringValue" value="https"/>
+                <oss_common:value xsi:type="oss_common:stringValue" value="ftpes"/>
+                <oss_common:value xsi:type="oss_common:stringValue" value="laad"/>
+            </oss_common:values>
+        </oss_capabilitysupport:value>
+    </oss_capabilitysupport:complexCapability>
+
+</oss_capabilitysupport:CapabilitySupportDefinition>

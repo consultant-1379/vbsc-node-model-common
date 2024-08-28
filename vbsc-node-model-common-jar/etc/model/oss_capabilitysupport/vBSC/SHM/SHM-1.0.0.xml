@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oss_capabilitysupport:CapabilitySupportDefinition oss_common:ns="vBSC" oss_common:name="SHM" oss_common:version="1.0.0" oss_common:lifeCycle="CURRENT" xmlns:oss_capabilitysupport="urn:com:ericsson:schema:xml:oss:oss_capabilitysupport" xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common" xmlns:oss_capability="urn:com:ericsson:schema:xml:oss:oss_capability" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <oss_common:modelCreationInfo author="ericsson" creationDate="2021-11-25">
+        <oss_common:designedModel componentId="vbsc-node-model-common" />
+    </oss_common:modelCreationInfo>
+    <oss_common:desc>SHM Capability Support for Platform Type corresponding to Network Element of type vBSC.</oss_common:desc>
+    <oss_capabilitysupport:capability name="UpgradeJob_workflowPrefix" value="AXE" />
+    <oss_capabilitysupport:capability name="NodeFunction" value="BSC" />
+    <oss_capabilitysupport:capability name="SoftwareInventory_workflowPrefix" value="AXE" />
+    <oss_capabilitysupport:capability name="HardwareInventory_workflowPrefix" value="AXE" />
+    <oss_capabilitysupport:capability name="HasHardwareInventory" value="false"  />
+    <oss_capabilitysupport:capability name="SHMInventorySyncAlignmentWithCMSync" value="Disabled" />
+    <oss_capabilitysupport:capability name="LicenseInventory_workflowPrefix" value="AXE" />
+    <oss_capabilitysupport:capability name="BackupInventory_workflowPrefix" value="AXE" />
+    <oss_capabilitysupport:capability name="BackupJob_workflowPrefix" value="AXE" />
+    <oss_capabilitysupport:capability name="DeleteBackupJob_workflowPrefix" value="AXE" />
+    <oss_capabilitysupport:capability name="LicenseJob_workflowPrefix" value="AXE" />
+    <oss_capabilitysupport:capability name="BackupHousekeepingJob_workflowPrefix" value="AXE" />
+    <oss_capabilitysupport:capability name="RestoreJob_workflowPrefix" value="AXE" />
+</oss_capabilitysupport:CapabilitySupportDefinition>

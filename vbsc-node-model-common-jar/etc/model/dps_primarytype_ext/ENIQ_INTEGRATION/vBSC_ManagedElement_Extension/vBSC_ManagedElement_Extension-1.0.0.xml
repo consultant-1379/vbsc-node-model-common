@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- *******************************************************************************
+    * COPYRIGHT Ericsson 2022 *
+    * The copyright to the computer program(s) herein
+    * is the property of * Ericsson Inc. The programs may be used and/or copied
+    * only with written * permission from Ericsson Inc. or in accordance with the
+    * terms and * conditions stipulated in the agreement/contract under which the
+    * program(s) have been supplied.
+    *******************************************************************************
+    -->
+
+<pte:PrimaryTypeExtensionDefinition
+    xmlns:oss_common="urn:com:ericsson:schema:xml:oss:oss_common" xmlns:pt="urn:com:ericsson:schema:xml:oss:dps_primarytype"
+    xmlns:pte="urn:com:ericsson:schema:xml:oss:dps_primarytype_ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" oss_common:ns="ENIQ_INTEGRATION"
+    oss_common:name="vBSC_ManagedElement_Extension" oss_common:version="1.0.0">
+    <oss_common:modelCreationInfo author="zkshhrx"
+        creationDate="03-Feb-2022">
+        <oss_common:designedModel componentId="ManagedElement" />
+    </oss_common:modelCreationInfo>
+    <oss_common:desc>This extension model will make use of ManagedElement
+        model and provide an extension of the Primary Type ( and some
+        attributes) behaviors.
+        ENIQ topology service provides this model
+        extension for receiving creation
+        events
+    </oss_common:desc>
+    <oss_common:extendedModelElement urn="//ComTop/ManagedElement/*" />
+    <pte:primaryTypeExtension>
+        <pte:changeEventHandling onCreatePo="VALUES" />
+    </pte:primaryTypeExtension>
+</pte:PrimaryTypeExtensionDefinition>
